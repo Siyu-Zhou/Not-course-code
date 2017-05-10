@@ -68,19 +68,12 @@ function filecontent(filename){
 
 function innerjoin(firstfile, sencondfile, firstkey, secondkey){
 //make an index according to firstkey value
-//@para---index is a object,properties name in the firstfile keyvalue
+//@para---index is a object(all properties are array）,properties name is the firstfile keyvalue.index construct like{propertity name: index[]}
 //@para---index[firstfile keyvalue] is an array, collect tuple objects in firstfile according to the firsteky value
 //incase the key is not primiary key which means maybe duplicate, so here use array to solve problem.
     var index = {};
 	for(var i = 0; i < flength; i++){
-        if(index[firstfile[i][firstkey]]){
-        	index[firstfile[i][firstkey]].push(firstfile[i]);
-        }
-        else{
-        	index[firstfile[i][firstkey]] = [];
-        	index[firstfile[i][firstkey]].push(firstfile[i]);
-        }
-
+        getIndexFromFirstFile(index, i, firstfile, firstkey);
 	};
 
     for(var j = 0; j < slength; j++){
@@ -125,13 +118,7 @@ function totalorder(name){
 function rightoutjoin(firstfile, sencondfile, firstkey, secondkey){
     var index = {};
 	for(var i = 0; i < flength; i++){
-        if(index[firstfile[i][firstkey]]){
-        	index[firstfile[i][firstkey]].push(firstfile[i]);
-        }
-        else{
-        	index[firstfile[i][firstkey]] = [];
-        	index[firstfile[i][firstkey]].push(firstfile[i]);
-        }
+        getIndexFromFirstFile(index, i, firstfile, firstkey);
 	};
 
     for(var j = 0; j < slength; j++){
@@ -168,14 +155,7 @@ function rightoutjoin(firstfile, sencondfile, firstkey, secondkey){
 function leftoutjoin(ffile, sfile, fkey, skey){
     var index = {};
 	for(var i = 0; i < slength; i++){
-		
-        if(index[ffile[i][fkey]]){
-        	index[ffile[i][fkey]].push(ffile[i]);
-        }
-        else{
-        	index[ffile[i][fkey]] = [];
-        	index[ffile[i][fkey]].push(ffile[i]);
-        }
+        getIndexFromFirstFile(index, i, ffile, fkey);
 	};
     for(var j = 0; j < flength; j++){
         var scurrkv=sfile[j][skey];
@@ -210,14 +190,7 @@ function leftoutjoin(ffile, sfile, fkey, skey){
 function fulloutjoin(firstfile, sencondfile, firstkey, secondkey){
     var index = {};
 	for(var i = 0; i < flength; i++){
-		
-        if(index[firstfile[i][firstkey]]){
-        	index[firstfile[i][firstkey]].push(firstfile[i]);
-        }
-        else{
-        	index[firstfile[i][firstkey]] = [];
-        	index[firstfile[i][firstkey]].push(firstfile[i]);
-        }
+        getIndexFromFirstFile(index, i, firstfile, firstkey);
 	};
 //@para---counterfirstfile, use this to count whether there are some tuple object haven't done outjoin in firstfile
 //deep copy index object set into firstfile
@@ -271,4 +244,15 @@ var countfirstfile = JSON.parse(temp);
 	}
 	console.log("The fulloutjoin result: ");	
 	console.dir(fulloutresult);
+};
+
+function getIndexFromFirstFile(index, i, ffile, fkey){
+   if(index[ffile[i][fkey]]){
+            index[ffile[i][fkey]].push(ffile[i]);
+        }
+        else{
+//here make all properties in index become array
+            index[ffile[i][fkey]] = [];
+            index[ffile[i][fkey]].push(ffile[i]);
+        }
 };
