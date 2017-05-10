@@ -1,5 +1,6 @@
 ****This code is written according to the Shopify Interview problem for Data Engineering
 ****Problem description canbe seen in DataEng-ProDes.png.
+****Result show in result.png
 
 1.This code is general enough for any two jason files like example, even the user choosen key is not primary key in any of these two files.
 However,you nedd to change some parameter as step 3 said.
@@ -13,7 +14,7 @@ Time complexity for leftjoin is  O(m+n+X). X is the number of duplicate keyvalue
 Time complexity for outjoin is  O(m+n+X+Y). X is the number of duplicate keyvalue in fistfile objects.
 Y=(# of objects in firstfile cannot match to the secondfile)+(number of duplicate objects in former unmatched objects )
 
-2.This code is write in jsvascript in node.js.Devolpe and test at OSX 10.12.3 && node.js v6.10.2. Author by Siyu Zhou
+2.This code is write in javascript in node.js.Develope and test at OSX 10.12.3 && node.js v6.10.2. Author by Siyu Zhou
 
 3.If the two source json files or two keys changed, users just need to chage the following 
 three arguments(FileNames,firstkey,secondkey) and json properities names&corresponding value in parameter newtuple

@@ -11,7 +11,7 @@
 *Time complexity for outjoin is  O(m+n+X+Y). X is the number of duplicate keyvalue in fistfile objects.
 *Y=(# of objects in firstfile cannot match to the secondfile)+(number of duplicate objects in former unmatched objects )
 *
-*2.This code is write in jsvascript in node.js.Devolpe and test at OSX 10.12.3 && node.js v6.10.2. Author by Siyu Zhou
+*2.This code is write in jsvascript in node.js.Develope and test at OSX 10.12.3 && node.js v6.10.2. Author by Siyu Zhou
 *
 *3If the two source json files or two keys changed, users just need to chage the following 
 *three arguments(FileNames,firstkey,secondkey) and json properities names&corresponding value in parameter newtuple
