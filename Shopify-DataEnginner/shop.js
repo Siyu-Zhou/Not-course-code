@@ -62,9 +62,9 @@ else{
 };
 
 function filecontent(filename){
-	       content = fs.readFileSync(filename,"utf-8");
-	       return JSON.parse(content);
-    };
+	content = fs.readFileSync(filename,"utf-8");
+	return JSON.parse(content);
+};
 
 function innerjoin(firstfile, sencondfile, firstkey, secondkey){
 //make an index according to firstkey value
