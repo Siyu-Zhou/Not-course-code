@@ -1,5 +1,5 @@
 /*************************************************************
-*1.This code is general enough for any two jason files like example, even the user choosen key is not primary key in any of these two files.
+*1.This code is general enough for any two json files like example, even the user choosen key is not primary key in any of these two files.
 *However,you nedd to change some parameter as step 3 said.
 *
 *2.The requirment said "key". I am not sure it is primary key or keyvalue canbe duplicate  
