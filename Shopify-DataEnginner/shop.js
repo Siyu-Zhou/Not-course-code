@@ -66,7 +66,7 @@ function filecontent(filename){
 	return JSON.parse(content);
 };
 
-function innerjoin(firstfile, sencondfile, firstkey, secondkey){
+function innerjoin(firstfile, secondfile, firstkey, secondkey){
 //make an index according to firstkey value
 //@para---index is a object(all properties are array）,properties name is the firstfile keyvalue.index construct like{propertity name: index[]}
 //@para---index[firstfile keyvalue] is an array, collect tuple objects in firstfile according to the firsteky value
@@ -115,7 +115,7 @@ function totalorder(name){
 	console.log("Total orders of "+name+"is "+sum);
 };
 
-function rightoutjoin(firstfile, sencondfile, firstkey, secondkey){
+function rightoutjoin(firstfile, secondfile, firstkey, secondkey){
     var index = {};
 	for(var i = 0; i < flength; i++){
         getIndexFromFirstFile(index, i, firstfile, firstkey);
@@ -187,7 +187,7 @@ function leftoutjoin(ffile, sfile, fkey, skey){
 	console.dir(leftoutresult);
 };
 
-function fulloutjoin(firstfile, sencondfile, firstkey, secondkey){
+function fulloutjoin(firstfile, secondfile, firstkey, secondkey){
     var index = {};
 	for(var i = 0; i < flength; i++){
         getIndexFromFirstFile(index, i, firstfile, firstkey);
