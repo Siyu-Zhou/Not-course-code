@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+        <link href="./style.css" rel="stylesheet" type="text/css" />
+		<title>SQL join</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="./page.js"></script>
+    </head>
+    <body>
+      <h1>Welcome to SQL join webpage</h1>
+      <hr>
+      </br>
+      </br>
+      <div id = 'tables-area'>
+        <div id = "first-table-area">
+            <label>Table 1: </label>
+        
+            <select id = "ftdropdown" name = "ftablename"></select>
+            <button id = "showfkey" type = "button">Choose key</button>
+            </br>
+            </br>
+            <label>Key 1: </label>       
+            <select id = "fkdropdown" name = "fkeyname">
+               <option value = '' disabled selected>Click blue button</option>
+            </select>
+            </br>
+            </br>   
+        </div>
+        
+        <div id = "second-table-area">
+            <label>Table 2: </label>
+            <select id = "stdropdown" name = "stablename"></select>
+            <button id = "showskey" type = "button">Choose key</button>
+            </br>
+            </br>
+            <label>Key 2: </label>
+            <select id = "skdropdown" name = "skeyname">
+               <option value = '' disabled selected>Click blue button</option>
+            </select>
+            </br> 
+            </br> 
+        </div>
+      </div>
+
+      <div id = "all-join-function">
+        </br>
+        </br>
+        <button id = "innerjoin" type = "button">innerjoin</button>
+        </br>
+        </br>
+        <button id = "leftoutjoin" type = "button">leftoutjoin</button>
+        </br>
+        </br>
+        <button id = "rightoutjoin" type = "button">rightoutjoin</button>
+        </br>
+        </br>
+        <button id = "fulloutjoin" type = "button">fulloutjoin</button>
+      </div>
+
+    </body>
+</html> 

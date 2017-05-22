@@ -1,0 +1,67 @@
+body{
+	
+	font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+	background-color:#FDEDEC;
+
+}
+
+h1{
+	text-align:center;
+}
+#tables-area{
+	width:80%;
+	margin:0 auto;
+
+}
+#first-table-area{
+	text-align:center;
+	float:left;
+
+}
+
+#second-table-area{
+	text-align:center;
+	float:right;
+
+}
+
+#all-join-function{
+	text-align:center;
+	clear:both;
+
+}
+#ftdropdown,#stdropdown{
+	width: 140px;
+	height:30px;
+	font-size: 14px;
+
+}
+
+#fkdropdown,#skdropdown{
+    width: 140px;
+	height:30px;
+	font-size: 14px;
+	color:grey;
+}
+#showfkey,#showskey{
+	width: 100px;
+	height:30px;
+	border-radius:1px;
+	border:none;
+	background-color: lightblue;
+	font-size: 14px;
+	border-radius:3px;
+}
+
+#innerjoin, #leftoutjoin, #rightoutjoin, #fulloutjoin{
+	
+	width: 180px;
+	height:60px;
+	border:none;
+	border-radius:3px;
+	background-color:#7AB55C;
+	font-size: 18px;
+}
+
+
+
