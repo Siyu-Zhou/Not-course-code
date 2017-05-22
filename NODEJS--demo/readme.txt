@@ -6,6 +6,7 @@
 6. In last link's parent file, you can see the algorithm analysis in readme
 7.Reference from Carleton COMP2406 course material
 Reference from http://stackoverflow.com/questions/17500312/is-there-some-way-i-can-join-the-contents-of-two-javascript-arrays-much-like-i
+8. Develope at OSX 10.12.3, Test at chrome 57.0.2987.133 (64-bit)
 
 
 
