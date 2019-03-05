@@ -5,15 +5,6 @@
 1.This code is general enough for any two json files like example, even the user choosen key is not primary key in any of these two files.
 However,you nedd to change some parameter as step 3 said.
 
-2.The requirment said "key". I am not sure it is primary key or keyvalue canbe duplicate  
-Time complexity for innerjoin, rightjoin is  O(m+n+X). m is the array length firstfile, n is the array length secondfile.
-X is the number of duplicate keyvalue in fistfile objects. 
-
-Time complexity for leftjoin is  O(m+n+X). X is the number of duplicate keyvalue in secondfile objects.
-
-Time complexity for outjoin is  O(m+n+X+Y). X is the number of duplicate keyvalue in fistfile objects.
-Y=(# of objects in firstfile cannot match to the secondfile)+(number of duplicate objects in former unmatched objects )
-
 2.This code is write in javascript in node.js.Develope and test at OSX 10.12.3 && node.js v6.10.2. Author by Siyu Zhou
 
 3.If the two source json files or two keys changed, users just need to chage the following 
